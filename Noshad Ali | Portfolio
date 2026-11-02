@@ -1,0 +1,286 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{parskip}
+
+% ===== COLOR THEME (Deep Teal + Coral + Charcoal) =====
+\definecolor{primary}{RGB}{13, 115, 119}      % Deep Teal
+\definecolor{secondary}{RGB}{230, 126, 34}    % Coral/Orange
+\definecolor{dark}{RGB}{44, 62, 80}           % Charcoal
+\definecolor{lightbg}{RGB}{245, 247, 248}     % Light Gray
+\definecolor{graytext}{RGB}{120, 130, 140}
+
+% ===== HYPERLINK SETUP =====
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primary,
+    urlcolor=primary,
+    citecolor=primary
+}
+
+% ===== SECTION FORMATTING =====
+\titleformat{\section}
+{\color{primary}\Huge\bfseries}
+{}
+{0em}
+{}[\vspace{2pt}{\color{secondary}\rule{\textwidth}{1.5pt}}]
+
+\titlespacing*{\section}{0pt}{0pt}{1em}
+
+\titleformat{\subsection}
+{\color{dark}\Large\bfseries}
+{}
+{0em}
+{}
+
+\titlespacing*{\subsection}{0pt}{1em}{0.5em}
+
+% ===== PAGE HEADER/FOOTER =====
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\color{graytext}\small Noshad Ali \quad|\quad \thepage}
+\fancyfoot[R]{\color{graytext}\small\faEnvelope\ \href{mailto:noshadahmadtunio@gmail.com}{noshadahmadtunio@gmail.com}}
+
+% ===== CUSTOM COMMANDS =====
+\newcommand{\pageTitle}[2]{%
+    \vspace*{0.5cm}
+    \noindent{\color{primary}\Huge\bfseries #1}\\[0.1cm]
+    {\color{graytext}\large #2}
+    \vspace{0.3cm}
+    \noindent{\color{secondary}\rule{\textwidth}{1.5pt}}
+    \vspace{0.5cm}
+}
+
+\newcommand{\infoCard}[2]{%
+    \noindent\colorbox{lightbg}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+        \vspace{4pt}
+        \textbf{\color{primary}#1}\\[2pt]
+        {\color{dark}#2}
+        \vspace{4pt}
+    }}
+}
+
+\begin{document}
+
+% ============================================================
+% PAGE 1: COVER / HOME
+% ============================================================
+\thispagestyle{empty}
+\begin{center}
+    \vspace*{2cm}
+    {\color{primary}\rule{\textwidth}{2pt}}\\[0.5cm]
+    {\Huge\bfseries\color{dark} Noshad Ali}\\[0.4cm]
+    {\LARGE\color{primary} Computer Science Student}\\[0.2cm]
+    {\large\color{graytext} Dawood University of Engineering \& Technology, Karachi}\\[0.5cm]
+    {\color{secondary}\rule{\textwidth}{2pt}}\\[1.5cm]
+
+    {\large\color{dark}\itshape
+    ``Turning curiosity into code, and code into solutions.''}\\[1.5cm]
+
+    % Contact Icons
+    \faEnvelope\ \href{mailto:noshadahmadtunio@gmail.com}{noshadahmadtunio@gmail.com}\\[0.3cm]
+    \faLinkedin\ \href{https://www.linkedin.com/in/noshad-ali-a6a325414}{linkedin.com/in/noshad-ali}\\[0.3cm]
+    \faGithub\ \href{https://github.com/noshadahmadtunio-sketch}{github.com/noshadahmadtunio-sketch}\\[2cm]
+
+    {\large\color{graytext} \faArrowDown\ \textit{Explore my portfolio}}\\[0.3cm]
+    {\color{graytext}\small About Me \ $\cdot$ \ Skills \ $\cdot$ \ Projects \ $\cdot$ \ Experience \ $\cdot$ \ Contact}
+\end{center}
+\newpage
+
+% ============================================================
+% PAGE 2: ABOUT ME
+% ============================================================
+\pageTitle{About Me}{Get to know who I am}
+
+\vspace{0.5cm}
+
+\noindent
+\begin{minipage}{0.95\textwidth}
+{\large\color{dark}
+Hello! I'm \textbf{\color{primary}Noshad Ali}, a passionate \textbf{Computer Science} student at \textbf{Dawood University of Engineering and Technology, Karachi}. I'm driven by a deep curiosity for technology and how software can solve real-world problems.
+
+\vspace{0.4cm}
+
+My journey in computer science is fueled by a desire to learn, build, and innovate. I'm constantly exploring new technologies, sharpening my programming skills, and working on projects that challenge me to grow as a developer.
+}
+\end{minipage}
+
+\vspace{1cm}
+
+\subsection*{\faGraduationCap\ Education}
+\infoCard{Bachelor of Science in Computer Science}{Dawood University of Engineering and Technology, Karachi \hfill \textit{In Progress}}
+
+\vspace{0.5cm}
+
+\subsection*{\faBullseye\ What I'm Focused On}
+\begin{itemize}[leftmargin=*, itemsep=4pt]
+    \item \textbf{\color{primary}Studying:} Computer Science at DUET.
+    \item \textbf{\color{primary}Based in:} Karachi, Pakistan.
+    \item \textbf{\color{primary}Building:} Creating projects that apply what I learn in real scenarios.
+\end{itemize}
+
+\newpage
+
+% ============================================================
+% PAGE 3: SKILLS
+% ============================================================
+\pageTitle{Skills}{Technologies and tools I work with}
+
+\vspace{0.5cm}
+
+\subsection*{\faCode\ Programming Languages}
+\infoCard{}{%
+    \vspace{2pt}
+    C++, Java
+    \vspace{2pt}
+}
+
+\vspace{0.8cm}
+
+\subsection*{\faTools\ Tools \& Platforms}
+\infoCard{}{%
+    \vspace{2pt}
+    Excel
+    \vspace{2pt}
+}
+
+\vspace{0.8cm}
+
+\subsection*{\faLayerGroup\ Frameworks \& Libraries}
+\infoCard{}{%
+    \vspace{2pt}
+    \textit{\color{graytext}Skills to be added soon...}
+    \vspace{2pt}
+}
+
+\newpage
+
+% ============================================================
+% PAGE 4: PROJECTS
+% ============================================================
+\pageTitle{Projects}{Things I've built and am working on}
+
+\vspace{0.5cm}
+
+\subsection*{\faLaptopCode\ Excel Dashboard}
+\infoCard{Excel Dashboard}{%
+    \vspace{2pt}
+    An interactive dashboard built in Excel that turns raw data into clear charts and summaries.\\[4pt]
+    \textbf{Tools:} Excel, Dashboard, Data analysis
+    \vspace{2pt}
+}
+
+\vspace{1cm}
+
+\begin{center}
+    {\color{graytext}\small\faGithub\ Check out my GitHub for the latest work:}\\[0.2cm]
+    \href{https://github.com/noshadahmadtunio-sketch}{\large\textbf{github.com/noshadahmadtunio-sketch}}
+\end{center}
+
+\newpage
+
+% ============================================================
+% PAGE 5: EXPERIENCE
+% ============================================================
+\pageTitle{Experience}{My professional and academic journey}
+
+\vspace{0.5cm}
+
+\subsection*{\faBriefcase\ Work Experience}
+\infoCard{Position Title Goes Here}{%
+    \vspace{2pt}
+    \textit{\color{graytext}Company name, duration, and details will be added soon...}
+    \vspace{2pt}
+}
+
+\vspace{0.8cm}
+
+\subsection*{\faUsers\ Internships \& Volunteering}
+\infoCard{Role Goes Here}{%
+    \vspace{2pt}
+    \textit{\color{graytext}Organization, duration, and details will be added soon...}
+    \vspace{2pt}
+}
+
+\newpage
+
+% ============================================================
+% PAGE 6: CONTACT ME
+% ============================================================
+\pageTitle{Contact Me}{Let's connect and collaborate}
+
+\vspace{1cm}
+
+\begin{center}
+    {\large\color{dark}I'm always open to new opportunities, collaborations, and conversations.}\\[0.3cm]
+    {\large\color{dark}Feel free to reach out through any of the channels below!}
+\end{center}
+
+\vspace{1.5cm}
+
+\noindent
+\begin{minipage}{0.48\textwidth}
+    \colorbox{lightbg}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
+        \vspace{10pt}
+        \centering
+        {\color{primary}\Large\faEnvelope}\\[4pt]
+        {\bfseries\color{dark}Email}\\[2pt]
+        {\small\href{mailto:noshadahmadtunio@gmail.com}{noshadahmadtunio@gmail.com}}
+        \vspace{10pt}
+    }}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+    \colorbox{lightbg}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
+        \vspace{10pt}
+        \centering
+        {\color{primary}\Large\faLinkedin}\\[4pt]
+        {\bfseries\color{dark}LinkedIn}\\[2pt]
+        {\small\href{https://www.linkedin.com/in/noshad-ali-a6a325414}{Noshad Ali}}
+        \vspace{10pt}
+    }}
+\end{minipage}
+
+\vspace{0.8cm}
+
+\noindent
+\begin{minipage}{0.48\textwidth}
+    \colorbox{lightbg}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
+        \vspace{10pt}
+        \centering
+        {\color{primary}\Large\faGithub}\\[4pt]
+        {\bfseries\color{dark}GitHub}\\[2pt]
+        {\small\href{https://github.com/noshadahmadtunio-sketch}{noshadahmadtunio-sketch}}
+        \vspace{10pt}
+    }}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+    \colorbox{lightbg}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
+        \vspace{10pt}
+        \centering
+        {\color{primary}\Large\faMapMarker*}\\[4pt]
+        {\bfseries\color{dark}Location}\\[2pt]
+        {\small Karachi, Pakistan}
+        \vspace{10pt}
+    }}
+\end{minipage}
+
+\vspace{2cm}
+
+\begin{center}
+    {\color{secondary}\rule{0.5\textwidth}{1pt}}\\[0.5cm]
+    {\large\color{dark}\itshape Thank you for visiting my portfolio!}\\[0.3cm]
+    {\color{graytext}\small Let's build something great together. \faHeart}
+\end{center}
+
+\end{document}
